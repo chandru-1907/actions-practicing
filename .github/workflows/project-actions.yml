@@ -9,11 +9,8 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
-            - name: Print welcome message
-              run: echo "Welcome to the new strange thing"
-
-            - name: List the files
-              run: ls
-
-            - name: Read file
-              run: cat iron-man.txt
+            - name: Run a multiline command
+              run: | 
+                echo "Welcome to the new strange thing"
+                ls -a
+                cat iron-man.txt

@@ -1,0 +1,25 @@
+name: Generate a amazing artwork in the CLI
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+            
+            - name: Install the cowsay dependecy for creating the art-work
+              run: sudo apt-get install cowsay -y 
+            
+            - name: Execute the cowsay
+              run: cowsay -f dog "Yeah, I am a dog" >> dog.txt
+
+            - name: Test if file is exists
+              run: grep -i "dog" dog.txt
+
+            - name: Read the file content
+              run: cat dog.txt
+
+            - name: List the files
+              run: ls -a
