@@ -8,3 +8,9 @@ jobs:
         steps:
             - name: Print welcome message
               run: echo "Welcome to the new strange thing"
+
+            - name: List the files
+              run: ls
+
+            - name: Read file
+              run: cat iron-man.txt
