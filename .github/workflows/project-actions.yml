@@ -1,0 +1,10 @@
+name: My all new workflow
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print welcome message
+              run: echo "Welcome to the new strange thing"
